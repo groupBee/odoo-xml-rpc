@@ -24,6 +24,10 @@ public class Main {
         final XmlRpcClientConfigImpl common_config = new XmlRpcClientConfigImpl();
         common_config.setServerURL(new URL(String.format("%s/xmlrpc/2/common", url)));
         System.out.println(client.execute(common_config, "version", emptyList()));
+        final XmlRpcClientConfigImpl start_config = new XmlRpcClientConfigImpl();
+        start_config.setServerURL(new URL(url+"/start"));
+
+
 
     }
 }
